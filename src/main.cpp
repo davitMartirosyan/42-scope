@@ -46,7 +46,7 @@ int main() {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     // Initialize GLAD
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+    if (!gladLoadGL(glfwGetProcAddress)) {
         printf("Failed to initialize GLAD\n");
         glfwDestroyWindow(window);
         glfwTerminate();
